@@ -1,4 +1,4 @@
-# Ruby metaprogramming 
+****# Ruby metaprogramming 
 ## What is metaprogramming?
 >### Metaprogramming is a technique by which we can write code that writes code by itself dynamically at runtime. This means we can define methods and classes during runtime. It can be used a way to add, edit or modify the code of our program while it’s running. Using it, we can make new or delete existing methods on objects, reopen or modify existing classes, catch methods that don’t exist, and avoid repetitious coding to keep our program _**dry**_.
 ## Techniques of metaprogramming
@@ -88,7 +88,7 @@ name.k   # => "Amit kumar"
 ```
 On the first line, we create a new variable called **name** that represents a simple String value. On the second line, we create a new method called **name.k**, and give it a very simple content. Ruby allows us to choose what object to attach a method definition to by using the format **some_object.method_name**, which we may recognize as the same syntax for adding class methods to classes . In this case, as we had name first, the method has been attached to our name variable. On the final line, we call the new **name.k** method we just defined.
 
-The **name.k** method has access to the entire object it has been attached to; in Ruby, we always refer to that object as **self**. In this case, **self** refers to the String value we attached it to. If we had attached it to a Array, self would have returned that Array object.
+The **name.k** method has access to the entire object it has been attached to. In Ruby, we always refer to that object as **self**. In this case, **self** refers to the String value we attached it to. If we had attached it to a Array, self would have returned that Array object.
 >>## instance_eval
  Having singleton classes is all good, but to truly work with objects dynamically we need to be able to re-open them at runtime within other functions. Unfortunately, Ruby does not syntactically allow us to have any class statements within a function. This is where we need instance_eval.
  
